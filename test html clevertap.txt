@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html>
+ <head lang="en">
+   <meta charset="UTF-8"/> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover,">
+   <link rel="stylesheet" href="main.css">
+
+ <style>
+   /* Linked Styles */
+
+
+
+
+@font-face {
+ font-family: 'Mikado Regular';
+ src: url('https://tc2-bucket.s3.us-east-2.amazonaws.com/public-test/MikadoRegular.otf');
+ font-weight: 700;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Brandon Regular';
+ src: url('https://tc2-bucket.s3.us-east-2.amazonaws.com/public-test/BrandoSansRegular.otf') format('otf');
+ font-weight: 700;
+ font-style: normal;
+}
+
+* {
+ -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ -webkit-user-select: none;  
+ -moz-user-select: none;    
+ -ms-user-select: none;      
+ user-select: none;    
+}
+
+html {
+ height: 100%;
+ margin: 0;
+ overflow: hidden;   
+}
+
+body {
+ font-family: 'Mikado Black', Arial, sans-serif;  
+ color: #fff;
+ background: #363636 url(https://tc2-bucket.s3.us-east-2.amazonaws.com/public-test/inapp.png) center center no-repeat;
+ background-size: cover;
+ text-align: center;
+ height: 100%;
+ margin: 0;
+ font-size: 25px;   
+}
+
+a {
+ display: block;
+ text-align: center;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: #fff;
+ height: 100%;
+}
+
+h1{
+ font-family: 'Mikado Black';
+ margin: 0;
+ margin-top: 1vh;
+ font-size: 1em;
+ line-height: 1.2em;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+p{
+ margin:.5vh 0;
+ color: #000000;
+ line-height: 1.3;
+ font-family: 'Brandon Regular';
+ font-size: 5.1vw;
+}
+
+.button-container {
+ margin: 0;
+ display: flex;
+ flex-direction: column;
+ height: 100vh;
+ justify-content: center;
+ align-items: center;
+}
+
+.cta{
+ width: 90vw;
+ height: 50px;
+ margin-top: 45vh;
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+
+.close-button {
+width: 90vw;
+ height: 50px;
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 20px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+}
+
+.container {
+ display: flex;
+ flex-direction: column;
+ width: 90vw;
+ height: 100vh;
+ margin: auto;
+ padding-top: 10vh;
+}
+
+.img-main{
+ width: 100%;
+ height: auto;
+}
+
+
+
+/* MEDIA QUERY PARA IPHONE X */
+@media only screen 
+and (min-device-height : 810px)
+and (-webkit-device-pixel-ratio : 3){
+.cta{
+ width: 90vw;
+ height: 50px;
+ margin-top: 50vh;
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+
+.close-button {
+width: 90vw;
+ height: 50px;
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 20px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+}
+}
+
+/* MEDIA QUERY PARA IPHONE XR Y SUPERIOR */
+@media only screen 
+and (min-device-height : 895px)
+and (-webkit-device-pixel-ratio : 2){
+.cta{
+ width: 90vw;
+ height: 50px; 
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+
+.close-button {
+width: 90vw;
+ height: 50px;
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 20px;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 20px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+}
+}
+
+/* MEDIA QUERY PARA IPHONE 6 7 8 PLUS - PIXEL 2 XL */
+@media only screen 
+and (max-device-height : 737px)
+and (-webkit-device-pixel-ratio : 3){ 
+.cta{
+ width: 90vw;
+ height: 50px;
+ margin-top: 50vh;
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+
+.close-button {
+width: 90vw;
+ height: 50px;
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 20px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+}
+}
+
+/* MEDIA QUERY PARA ANDROIDS GRANDES (S20) */
+@media only screen 
+and (min-device-height : 823px){ 
+.cta{
+ width: 90vw;
+ height: 50px;
+ margin-top: 40vh;
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+}
+
+
+.close-button {
+width: 90vw;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 20px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+}
+} 
+
+/* MEDIA QUERY PARA IPAD */
+@media only screen 
+ and (min-device-width: 768px) 
+ and (max-device-width: 1024px) 
+ and (-webkit-min-device-pixel-ratio: 1) {
+
+
+.container {
+ display: flex;
+ flex-direction: column;
+ width: 100%;
+ height: 100vh;
+ margin: auto;
+ padding-top: 10vh;
+ background: url(asset-ipad.png) center center no-repeat;
+ background-size: cover;
+}
+
+
+ h1 {
+     font-size: 1.7em;
+ }
+ p {
+   font-size: 3.5vw;
+   width: 80%;
+   margin: auto;
+
+ }
+.cta{
+ width: 70vw;
+ height: 60px;
+ margin-top: 45vh;
+ background-color: #1fbba6;
+ border: solid 3px #2dd6bf;
+ border-bottom: none;
+ box-shadow: 0 5px 0 #189786, 0 9px rgba(0, 0, 0, .2);
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+} 
+
+.cta a{
+ line-height: 45px;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+ text-transform: uppercase;
+ text-align: center;
+ align-items: center;
+ font-size: 35px;
+ padding-top: 0.4vh;
+
+}
+
+
+.close-button {
+width: 40vw;
+ height: 50px;
+ margin-top: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+
+}
+
+.close-button a {
+ color: #ffffff;
+ font-size: 30px;
+ font-family: 'Brandon Regular';
+ text-decoration: underline;
+ text-transform: none;
+ text-shadow: -1px 0 black, 0 3px black, 1px 0 black, 0 -1px black;
+}
+}
+ </style>
+   
+ </head>
+ <body scroll="no" style="overflow: hidden" language-data="{{${language} | default: 'en'}}" >
+
+   <div class="container">
+     <!-- TÍTULO -->
+     <h1 id="user-title">    
+${first_name}, LET’S CELEBRATE TOGETHER!
+
+     </h1>
+     <!-- PÁRRAFO -->
+     <p>    
+<br>It's our 10-year anniversary and we want to thank you for being part of the game by sending you a special gift to your home.
+     </p>
+     <!-- CTA -->
+<div class="button-container">
+     <div class="cta">
+       <a href="preguntados://?abButtonId=0">
+
+SCHEDULE DELIVERY
+       </a>
+     </div>
+
+         <!-- BOTÓN CERRAR -->
+   <div class="close-button">
+   <a href="appboy://close">No, Thanks</a>
+   </div>
+
+</div>
+
+   </div>
+
+<!--
+   <script>
+     // Obtener el nombre del usuario (reemplaza "John Doe" con el valor real del usuario)
+     const userName = "${userName}"; // Aquí debes utilizar una variable o función que obtenga el nombre del usuario
+
+
+     // Actualizar el contenido del título con el nombre del usuario
+     const userTitle = document.getElementById("user-title");
+     userTitle.textContent = `${userName}, LET’S CELEBRATE TOGETHER!`; // Utilizamos la variable userName aquí para mostrar el nombre en el título
+   </script> -->
+
+ </body>
+</html>
